@@ -31,14 +31,14 @@ def changeMac(interface, newMac):
 
 def getCurrentMac(interface):
     # enter the line (\n)
-    ifconfig_result = subprocess.check_output(["ifconfig", interface])
+    ifconfig_result = subprocess.check_output(["ifconfig", interface]).decode("utf-8")
     print(ifconfig_result)
     # get address eth0
-    # mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", ifconfig_result)
-    # if mac_address_search_result:
-    #     return mac_address_search_result.group(0)
-    # else:
-    #     print("[-] Could not read MAC address.")
+    mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", ifconfig_result)
+    if mac_address_search_result:
+        return mac_address_search_result.group(0)
+    else:
+        print("[-] Could not read MAC address.")
 
 
 # interface = options.interface
