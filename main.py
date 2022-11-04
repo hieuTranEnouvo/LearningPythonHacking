@@ -46,7 +46,7 @@ def getCurrentMac(interface):
 
 options = getArguments()
 currentMac = getCurrentMac(options.interface)
-print("Current Mac = " + currentMac)
+print("Current Mac = " + str(currentMac))
 # changeMac(options.interface, options.newMac)
 # print("[+] Changing MAC address for " + interface + " to " + newMac)
 # subprocess.call("ifconfig" + interface + " down", shell=True)
