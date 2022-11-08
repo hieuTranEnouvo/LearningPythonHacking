@@ -31,6 +31,7 @@ def changeMac(interface, newMac):
 
 def getCurrentMac(interface):
     # enter the line (\n)
+    # .decode("utf-8") => convert byte  to string
     ifconfig_result = subprocess.check_output(["ifconfig", interface]).decode("utf-8")
     print(ifconfig_result)
     # get address eth0
