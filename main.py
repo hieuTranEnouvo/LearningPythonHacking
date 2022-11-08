@@ -18,7 +18,7 @@ def getArguments():
     if not options.interface:
         parser.error("[-] Please specify and interface, use --help for more information")
     elif not options.newMac:
-        parser.error("[-] Please specify and Mac, use --help for more information")
+        parser.error("[-] Please specify and MAC, use --help for more information")
     return options
 
 
@@ -46,6 +46,7 @@ def getCurrentMac(interface):
 # newMac = options.newMac
 
 options = getArguments()
+changeMac(options.interface, options.newMac)
 currentMac = getCurrentMac(options.interface)
 print("Current Mac = " + str(currentMac))
 # changeMac(options.interface, options.newMac)
