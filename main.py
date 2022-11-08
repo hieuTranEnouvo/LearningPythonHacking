@@ -48,12 +48,13 @@ def getCurrentMac(interface):
 options = getArguments()
 currentMac = getCurrentMac(options.interface)
 print("Current Mac = " + str(currentMac))
+
 changeMac(options.interface, options.newMac)
 currentMac = getCurrentMac(options.interface)
 if currentMac == options.newMac:
     print("[+] MAC address was successfully changed to " + currentMac)
 else:
-    print("[+] Mac address did not get changed.")
+    print("[-] Mac address did not get changed.")
 # print("[+] Changing MAC address for " + interface + " to " + newMac)
 # subprocess.call("ifconfig" + interface + " down", shell=True)
 # subprocess.call("ifconfig" + interface + " hw ether" + newMac, shell=True)
