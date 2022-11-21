@@ -19,27 +19,27 @@ for word in lists:
         if hash == hashed:
             print(f"\033[1;32m HASH FOUND: {word} \n")
     elif hash_type == "SHA1":
-        hash_object = hashlib.md5(f"{word}".encode('utf-8'))
+        hash_object = hashlib.sha1(f"{word}".encode('utf-8'))
         hashed = hash_object.hexdigest()
         if hash == hashed:
             print(f"\033[1;32m HASH FOUND: {word} \n")
     elif hash_type == "SHA224":
-        hash_object = hashlib.md5(f"{word}".encode('utf-8'))
+        hash_object = hashlib.sha224(f"{word}".encode('utf-8'))
         hashed = hash_object.hexdigest()
         if hash == hashed:
             print(f"\033[1;32m HASH FOUND: {word} \n")
     elif hash_type == "SHA512":
-        hash_object = hashlib.md5(f"{word}".encode('utf-8'))
+        hash_object = hashlib.sha512(f"{word}".encode('utf-8'))
         hashed = hash_object.hexdigest()
         if hash == hashed:
             print(f"\033[1;32m HASH FOUND: {word} \n")
     elif hash_type == "SHA224":
-        hash_object = hashlib.md5(f"{word}".encode('utf-8'))
+        hash_object = hashlib.sha224(f"{word}".encode('utf-8'))
         hashed = hash_object.hexdigest()
         if hash == hashed:
             print(f"\033[1;32m HASH FOUND: {word} \n")
     elif hash_type == "SHA384":
-        hash_object = hashlib.md5(f"{word}".encode('utf-8'))
+        hash_object = hashlib.sha384(f"{word}".encode('utf-8'))
         hashed = hash_object.hexdigest()
         if hash == hashed:
             print(f"\033[1;32m HASH FOUND: {word} \n")
